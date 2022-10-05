@@ -1,30 +1,130 @@
-*:after {
-    box-sizing: border-box;
+/******************** general stylings ********************/
+
+* {
+    box-sizing: border-box;}
+
+html {
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+body {
+    margin: 0px;
+    background-color: hsl(16, 100%, 90%);
+    color: hsl(321, 21%, 26%);
+    font-weight: 300;
+    font-size: 1rem;
 }
 
-body{
-    background-color:hsl(16, 88%, 84%);
-    color: hsl(321, 21%, 26%);
-    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: 30px;
-    padding: 16px;
+header {
+    padding: 20px;
+    text-align: center
 }
 
 h1 {
-    font-size: 80px;
-    -webkit-text-fill-color:hsl(0, 0%, 100%);
+     font-size: 6rem;
+    font-weight: 700;
+    -webkit-text-fill-color: hsl(0, 0%, 100%);
     -webkit-text-stroke: 3px;
     -webkit-text-stroke-color: hsl(7, 85%, 48%);
+    margin: 24px 0 0 0;
+}
+
+h2{
+    color: hsl(321, 21%, 26%);
+    font-weight: 700;
+    font-size: 1.5rem; 
+}
+
+
+h3 {
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0 0 0 0;  
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+p {
+    margin: 0 0 0 0;
+}
+
+section {
+padding: 20px 0 0 20px;
+}
+
+/******************** specific stylings ********************/
+
+.header1 {  
+}
+
+.nav-pages {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: hsl(321, 21%, 26%);
+}
+
+.nav-link {
+    padding: 0px 20px;
+    color: hsl(0, 0%, 100%);
+}
+
+.nav-pages:hover {
+    color: hsl(7, 85%, 48%);
+}
+
+.nav-link:hover {
+    color: hsl(7, 85%, 48%);
+}
+
+.nav-pages:active {
+    color: hsl(44, 100%, 89%);
+}
+
+.nav-link:active {
+    color: hsl(44, 100%, 89%);
+}
+
+#hire-me {
+    color: hsl(321, 21%, 26%);
+    font-style: italic;
 }
 
 .subline {
-    font-size: 30px;
-    -webkit-text-fill-color:hsla(0, 0%, 100%, 0);
+    /*position: absolute;
+    left: 50%;
+    top: 25%; */
+    font-weight: 400;
+    font-size: 37px;
+    -webkit-text-fill-color: hsla(0, 0%, 100%, 0);
     -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: hsl(321, 21%, 26%);}
+    -webkit-text-stroke-color: hsl(321, 21%, 26%);
+}
+
+.bold {
+    font-weight: 700;
+}
+
+/*
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color:hsl(16, 100%, 90%);
+    color: hsl(321, 21%, 26%);
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 3em;
+}
 
 header {
-    padding: 16px;
+    padding: 2.5em;
     text-align: center
 }
 
@@ -32,3 +132,31 @@ main {
     max-width: 800px;
     margin: 0 auto;
 }
+
+h1 {
+    font-size: 90px;
+    -webkit-text-fill-color:hsl(0, 0%, 100%);
+    -webkit-text-stroke: 3px;
+    -webkit-text-stroke-color: hsl(7, 85%, 48%);
+    margin: bottom 0;
+}
+
+h2
+
+h3 {
+margin: .1em;
+padding: 0%;
+}
+
+
+ .subline {
+    /* position: absolute;
+    left: 50%;
+    top: 25%; */
+    font-size: 37px;
+    -webkit-text-fill-color: hsla(0, 0%, 100%, 0);
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: hsl(321, 21%, 26%);
+}
+
+    /* decendant combinator für "school name" & co */

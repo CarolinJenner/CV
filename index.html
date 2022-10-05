@@ -8,31 +8,37 @@
     <meta name="description" content="This is the cv of Carolin Jenner" />
     <link rel="stylesheet" href="style.css">
     <link
-        href="https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Open+Sans:wght@300;400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Open+Sans:ital,wght@300;400;700&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
-    <header>
+    <header class="header1">
         <h1>Carolin Jenner</h1>
         <p class="subline">web developer & designer</p>
-        <nav><a href="./index.html">curriculum vitae</a>
-            <a href="./portfolio.html">portfolio</a>
+        <nav><a class="nav-pages" href="./index.html">curriculum vitae</a>
+            <a class="nav-pages" href="./portfolio.html">portfolio</a>
         </nav>
-        <!--contact-->
+        <nav><a class="nav-link" href="#profile">profile</a>
+            <a class="nav-link" href="#skills">skills</a>
+            <a class="nav-link" href="#education">education</a>
+            <a class="nav-link" href="#work-experience">work experience</a>
+            <a class="nav-link" href="#find-me">find me...</a>
+        </nav>
     </header>
     <main>
-        <article>
+        <article id="profile">
             <header>
                 <h2>profile</h2>
             </header>
             <p>Hey, call me Caro. I'm an aesthetic loving, soon to be web developer. Born and living in Wiesbaden, I am
                 nevertheless at home everywhere with a lot of wandelust, my head in the clous and my eyes on the next
                 project.
-                <a href="mailto:example.mail@example.com">Count me in</a> for <em>your</em> next one.
+                <a href="mailto:example.mail@example.com" title="Hire me!" id="hire-me">Count me in</a> for
+                <em>your</em> next one.
             </p>
         </article>
-        <article>
+        <article id="skills">
             <header>
                 <h2>skills</h2>
             </header>
@@ -58,12 +64,13 @@
                 </ul>
             </section>
         </article>
-        <article>
+        <article id="education">
             <header>
                 <h2>education</h2>
             </header>
             <section>
-                <p>2016-2022 • University of Applied Sciences HTW Berlin</p>
+                <p>2016-2022</p>
+                <h3>University of Applied Sciences HTW Berlin</h3>
                 <p>Bachelor: Fashion Design</p>
                 <p>degree: bachelor of arts</p>
                 <ul>
@@ -80,28 +87,69 @@
 
             </section>
             <section>
-                <p>Designschule München
-                    2014 – 2016</p>
-                <p>Vocational School: Communication Desgin - Major: Fashion
-                    prematurely terminated
-                    layouting analog and digital
-                    target group focused corporate desgin and packaging
-                    typography basics
-                    calligraphy
-                    color and photography language
-                    realistic drawing
-                    technical fashion drawing and fashion illustration</p>
+                <p>2014 – 2016</p>
+                <h3>Designschule München</h3>
+                <p>Vocational School: Communication Desgin - Major: Fashion<br>prematurely terminated</p>
+                <ul>
+                    <li>layouting analog and digital</li>
+                    <li>target group focused corporate desgin and packaging</li>
+                    <li>typography basics</li>
+                    <li>calligraphy</li>
+                    <li>color and photography language</li>
+                    <li>realistic drawing</li>
+                    <li>technical fashion drawing and fashion illustration</li>
+                </ul>
+
             </section>
-            <section>Louise-Schröder-Schule Wiesbaden</section>
+            <section>
+                <p>2011-2013</p>
+                <h3>Louise-Schröder-Schule Wiesbaden</h3>
+                <p>A-Levels: Textil Engineering and Clothing
+                    Degree: vocational baccalaureate diploma</p>
+                <ul>
+                    <li>detail knowledge fibres, materials, refinement</li>
+                    <li>basics pattern making</li>
+                    <li>technical fashion drawing analog and digital</li>
+                    <li>tailoring and sewing</li>
+                </ul>
+            </section>
         </article>
-        <article>
+        <article id="work-experience">
             <header>
                 <h2>work experience</h2>
             </header>
-            <section>Kaviar Gauche</section>
-            <section>Kostümfundus Babelsberg</section>
-            <section>ARS 24 Studio</section>
-            <section>CMF</section>
+            <section>
+                <p>09.2021-12.2021</p>
+                <p><span class="bold">Kaviar Gauche</span> Berlin <br>
+                    <span class="bold">Internship:</span> Atelier<br>
+                    Manufacturing of prototypes, handcraft embroideries, accessoires<br>Assistance fot fitting and
+                    patternmaking<br>Technical darwings and product description texting for theonline shop
+                </p>
+            </section>
+            <section>
+                <p title="*prematurely terminated because of covid-19">03.2019<span class="bold">*</span></p>
+                <p><span class="bold">Kostümfundus Babelsberg</span> Potsdam<br>
+                    <span class="bold">Internship:</span> Style Department (TV, theatre & movies)<br>Arranging an
+                    historical
+                    examination with
+                    costumes<br>Support at the tailor shop and costume design on set
+                </p>
+            </section>
+            <section>
+                <p>10.2015-06.2016</p>
+                <p><span class="bold">ARS 24 Studio</span> München<br>
+                    <span class="bold">Freelance:</span> Styling Assistance<br>styling for online shops
+                    photoshooting<br>product description texting
+                </p>
+            </section>
+            <section>
+                <p>08.2015</p>
+                <p><span class="bold">CMF</span> Mörfelden-Waldorf<br>
+                    <span class="bold">Internship:</span> Communication Design<br>assistance at the
+                    photostudio<br>conceptual
+                    assistance
+                </p>
+            </section>
 
         </article>
 

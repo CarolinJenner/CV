@@ -3,39 +3,56 @@
 * {
     box-sizing: border-box;}
 
+:root {
+    --red-01: hsl(7, 85%, 48%);
+    --red-02: hsl(16, 100%, 90%);
+    --red-03: hsl(13, 98%, 82%);
+    --yellow-01: hsl(52, 100%, 89%);
+    --white-01: hsl(0, 0%, 100%);
+    --transparent-01: hsla(0, 0%, 100%, 0);
+    --transparent-02: hsla(0, 0%, 100%, 0.5);
+    --purple-01: hsl(321, 21%, 26%);
+}
+
 html {
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 16px;
     }
 
 body {
+    
     margin: 0px;
-    background-color: hsl(16, 100%, 90%);
-    color: hsl(321, 21%, 26%);
+    background-color: var(--red-02);
+    color: var(--purple-01);
     font-weight: 300;
-    font-size: 1rem;
+    font-size: calc(1rem + .1vw);
     word-spacing: .1rem;
 }
 
 header {
-    padding: 1.4rem;
-    text-align: center
+    padding: 5rem 1.4rem 0 1.4rem ;
+    text-align: center;
+}
+
+main {
+    max-width: 60ch;
+    margin: auto;
+    padding: 1rem;
 }
 
 h1 {
-     font-size: 5rem;
+    font-size: calc(1rem + 10vw);
     font-weight: 700;
-    -webkit-text-fill-color: hsl(0, 0%, 100%);
+    -webkit-text-fill-color: var(--white-01);
     -webkit-text-stroke: .2rem;
-    -webkit-text-stroke-color: hsl(7, 85%, 48%);
-    margin: 1.8rem 0 0 0;
+    -webkit-text-stroke-color: var(--red-01);
+    margin: 0;
 }
 
 h2{
-    color: hsl(321, 21%, 26%);
     font-weight: 700;
     font-size: 1.5rem; 
-    margin-bottom: 1.5rem;
+    margin-block: 1.5rem 1rem;
     text-align: center
 }
 
@@ -47,23 +64,60 @@ h3 {
     margin: 0 0 0 0;  
 }
 
-main {
-    max-width: 60ch;
-    margin: 0 auto;
-    padding: 1rem;
-}
-
 p {
     margin: 0 0 0 0;
 }
 
 section {
-padding: 1.3rem 0 0 1.3rem;
+padding: 0 0 0 1.3rem;
+}
+
+em {
+    font-style: normal;
 }
 
 /******************** specific stylings ********************/
 
-.header1 {  
+.header {  
+    width: auto;
+    background-image: linear-gradient(var(--yellow-01), var(--transparent-01));
+    transform-origin: 50% 50%;
+    transition: transform 1s ease-in-out, opacitiy 0.25s ease-in-out;
+    /* transition not working...again */
+    }
+
+.header:hover .hire-me, .header:focus-within .hire-me {
+    opacity: 1;
+    transform: scale(1.5);
+    }
+
+.footer {
+    margin-top: 3rem;
+    width: auto;
+    height: 50px;
+    background-image: linear-gradient(0deg, var(--yellow-01), var(--transparent-01));
+
+    font-weight: 700;
+    font-size: 1.5rem;
+    -webkit-text-fill-color: var(--white-01);
+    -webkit-text-stroke: .1rem;
+    -webkit-text-stroke-color: var(--red-01);
+}
+
+.footer-text {
+    text-align: center;
+    margin: 0%;
+}
+
+.footer-link, .footer-link:link, .footer-link:hover, .footer-link:active {
+    -webkit-text-fill-color: var(--white-01);
+    -webkit-text-stroke: .1rem;
+    -webkit-text-stroke-color: var(--purple-01);
+    text-align: center;
+}
+
+.text-bold {
+    font-weight: 700;
 }
 
 /******* nav-pages *******/
@@ -72,46 +126,98 @@ padding: 1.3rem 0 0 1.3rem;
     padding: .6rem 1.3rem;
     font-size: 1rem;
     font-weight: 400;
-    color: hsl(321, 21%, 26%);
+    text-decoration: none;
+    color: var(--purple-01);
 }
 
 .nav-pages:hover {
-    color: hsl(7, 85%, 48%);
+    color: var(--red-01);
 }
 
 .nav-pages:active {
-    color: hsl(44, 100%, 89%);
+    color: var(--yellow-01);
 }
 
 /******* nav-link *******/
 
 .nav-link {
     padding: 0px 1.4rem;
-    color: hsl(0, 0%, 100%);
+    color: var(--white-01);
+    transition: background-color 0.5s, ease-in-out;
+    text-decoration: none;
 }
 
 .nav-link:hover {
-    color: hsl(7, 85%, 48%);
+    background-color: hsla(0, 0%, 100%, 0.5);
+    border-radius: .25rem;
+    padding: .5rem;;
+    color: var(--red-01);   
 }
 
 .nav-link:active {
-    color: hsl(44, 100%, 89%);
+    color: var(--yellow-01);
 }
 
+.nav-link:focus {
+    background-color: var(--transparent-02);
+    outline-color: var(--red-01);
+    outline-style: double;
+    border-radius: .25rem;
+}
+
+/********** hire me *********/
+
+.hire-me {
+    position: absolute;
+    top: 3rem;
+    right: 3em;
+
+    padding: .4rem;
+    border-radius: .15rem;
+    background-color: var(--red-03);
+    opacity: 0.5;
+    
+    font-weight: 700;
+    font-size: 1.2rem;
+    -webkit-text-fill-color: var(--red-02);
+    -webkit-text-stroke: .07rem;
+    -webkit-text-stroke-color: var(--red-01);
+}
+
+/**** hire me @Text ****/
+
 #hire-me {
-    color: hsl(321, 21%, 26%);
+    color: var(--purple-01);
     font-style: italic;
 }
+
+
+/*********** contact **********/
+
+.contact {
+    font-weight: 700;
+    color: var(--purple-01);
+}
+
+.contact:hover {
+    color: var(--red-01);
+}
+
+.contact:active {
+    color: var(--yellow-01);
+}
+
+/************* exceptions ************/ 
 
 .subline {
     /*position: absolute;
     left: 50%;
     top: 25%; */
     font-weight: 400;
-    font-size: 2.4rem;
-    -webkit-text-fill-color: hsla(0, 0%, 100%, 0);
+    font-size: calc(1rem + 2.5vw);
+    -webkit-text-fill-color: var(--transparent-01);
     -webkit-text-stroke: .08rem;
-    -webkit-text-stroke-color: hsl(321, 21%, 26%);
+    -webkit-text-stroke-color: var(--purple-01);
     margin: .3rem 0 2.2rem 0;
 }
 
@@ -120,7 +226,7 @@ content: "";
 display: inline-block;
 width: 4rem;
 height: .7rem;
-background-color: hsl(44, 100%, 89%);
+background-color: var(--yellow-01);
 }
 
 .clear-after::after {
@@ -128,23 +234,19 @@ background-color: hsl(44, 100%, 89%);
     height: 0 !important;
 }
 
-.text-bold {
-    font-weight: 700;
-}
+/************** media-stylings **************/
+@media screen and (min-width: 768px) {
+    .main {
+        _color:var(--purple-01);
+    }
+   }
 
-.contact {
-    font-weight: 700;
-    color: hsl(321, 21%, 26%);
+@media screen and (prefers-color-scheme){
+    _body {
+        --red-02: hsl(321, 21%, 26%);
+        --purple-01: hsl(16, 100%, 90%);
+    }
 }
-
-.contact:hover {
-    color: hsl(7, 85%, 48%);
-}
-
-.contact:active {
-    color: hsl(44, 100%, 89%);
-}
-
 
 /*
 
@@ -189,7 +291,7 @@ padding: 0%;
     /* position: absolute;
     left: 50%;
     top: 25%; */
-    font-size: 37px;
+   /* font-size: 37px;
     -webkit-text-fill-color: hsla(0, 0%, 100%, 0);
     -webkit-text-stroke: 1px;
     -webkit-text-stroke-color: hsl(321, 21%, 26%);
